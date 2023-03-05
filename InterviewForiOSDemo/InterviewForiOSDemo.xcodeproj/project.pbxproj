@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830B0CB429B43EE900E07786 /* IFDDemoForGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 830B0CB329B43EE900E07786 /* IFDDemoForGCD.m */; };
 		83B1BEDB29B31F4000C859A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1BEDA29B31F4000C859A4 /* AppDelegate.m */; };
 		83B1BEDE29B31F4000C859A4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1BEDD29B31F4000C859A4 /* SceneDelegate.m */; };
 		83B1BEE129B31F4000C859A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1BEE029B31F4000C859A4 /* ViewController.m */; };
@@ -14,9 +15,13 @@
 		83B1BEE629B31F4200C859A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83B1BEE529B31F4200C859A4 /* Assets.xcassets */; };
 		83B1BEE929B31F4200C859A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83B1BEE729B31F4200C859A4 /* LaunchScreen.storyboard */; };
 		83B1BEEC29B31F4200C859A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1BEEB29B31F4200C859A4 /* main.m */; };
+		83B1BEF529B3281300C859A4 /* IFDKvc.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1BEF429B3281300C859A4 /* IFDKvc.m */; };
+		83B1BEF829B3283700C859A4 /* IFDPropertyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1BEF729B3283700C859A4 /* IFDPropertyClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		830B0CB229B43EE900E07786 /* IFDDemoForGCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFDDemoForGCD.h; sourceTree = "<group>"; };
+		830B0CB329B43EE900E07786 /* IFDDemoForGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFDDemoForGCD.m; sourceTree = "<group>"; };
 		83B1BED629B31F4000C859A4 /* InterviewForiOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewForiOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83B1BED929B31F4000C859A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		83B1BEDA29B31F4000C859A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +34,10 @@
 		83B1BEE829B31F4200C859A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83B1BEEA29B31F4200C859A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83B1BEEB29B31F4200C859A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83B1BEF329B3281300C859A4 /* IFDKvc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFDKvc.h; sourceTree = "<group>"; };
+		83B1BEF429B3281300C859A4 /* IFDKvc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFDKvc.m; sourceTree = "<group>"; };
+		83B1BEF629B3283700C859A4 /* IFDPropertyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFDPropertyClass.h; sourceTree = "<group>"; };
+		83B1BEF729B3283700C859A4 /* IFDPropertyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFDPropertyClass.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +76,7 @@
 				83B1BEDD29B31F4000C859A4 /* SceneDelegate.m */,
 				83B1BEDF29B31F4000C859A4 /* ViewController.h */,
 				83B1BEE029B31F4000C859A4 /* ViewController.m */,
+				83B1BEF229B327EC00C859A4 /* Class */,
 				83B1BEE229B31F4000C859A4 /* Main.storyboard */,
 				83B1BEE529B31F4200C859A4 /* Assets.xcassets */,
 				83B1BEE729B31F4200C859A4 /* LaunchScreen.storyboard */,
@@ -74,6 +84,19 @@
 				83B1BEEB29B31F4200C859A4 /* main.m */,
 			);
 			path = InterviewForiOSDemo;
+			sourceTree = "<group>";
+		};
+		83B1BEF229B327EC00C859A4 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				83B1BEF329B3281300C859A4 /* IFDKvc.h */,
+				83B1BEF429B3281300C859A4 /* IFDKvc.m */,
+				83B1BEF629B3283700C859A4 /* IFDPropertyClass.h */,
+				83B1BEF729B3283700C859A4 /* IFDPropertyClass.m */,
+				830B0CB229B43EE900E07786 /* IFDDemoForGCD.h */,
+				830B0CB329B43EE900E07786 /* IFDDemoForGCD.m */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +170,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83B1BEE129B31F4000C859A4 /* ViewController.m in Sources */,
+				83B1BEF529B3281300C859A4 /* IFDKvc.m in Sources */,
 				83B1BEDB29B31F4000C859A4 /* AppDelegate.m in Sources */,
+				830B0CB429B43EE900E07786 /* IFDDemoForGCD.m in Sources */,
+				83B1BEF829B3283700C859A4 /* IFDPropertyClass.m in Sources */,
 				83B1BEEC29B31F4200C859A4 /* main.m in Sources */,
 				83B1BEDE29B31F4000C859A4 /* SceneDelegate.m in Sources */,
 			);
@@ -305,7 +331,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = huaweiluo.com.AFNetworkingDemo.InterviewForiOSDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = huaweiluo.com.InterviewForiOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -332,7 +358,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = huaweiluo.com.AFNetworkingDemo.InterviewForiOSDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = huaweiluo.com.InterviewForiOSDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

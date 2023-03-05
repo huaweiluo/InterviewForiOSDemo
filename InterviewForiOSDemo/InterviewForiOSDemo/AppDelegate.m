@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-
+@property (assign, nonatomic) UIBackgroundTaskIdentifier backgroundUpdateTask;
 @end
 
 @implementation AppDelegate
@@ -19,6 +19,26 @@
     return YES;
 }
 
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    [self beingBackgroundUpdateTask];
+    
+    //** 在这里加上你需要长久运行的代码 */
+    
+    [self endBackgroundUpdateTask];
+}
+
+#pragma mark -
+#pragma mark gcd
+- (void)beingBackgroundUpdateTask {
+    self.backgroundUpdateTask = [[UIApplication sharedApplication] beginBackgroundTaskWithExpirationHandler:^{
+        [self endBackgroundUpdateTask];
+    }];
+}
+
+- (void)endBackgroundUpdateTask {
+    [[UIApplication sharedApplication] endBackgroundTask:self.backgroundUpdateTask];
+    self.backgroundUpdateTask = UIBackgroundTaskInvalid;
+}
 
 #pragma mark - UISceneSession lifecycle
 
