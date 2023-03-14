@@ -8,11 +8,16 @@
 #import "ViewController.h"
 #import "IFDKvc.h"
 #import "IFDDemoForGCD.h"
+#import "IFDDemoForNSOperation.h"
+#import "IFDRunLoopDemo.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) NSString *nameString;
 @property (nonatomic, strong) IFDKvc *kvcObject;
 @property (nonatomic, strong) IFDDemoForGCD *demoForGCD;
+@property (nonatomic, strong) IFDDemoForNSOperation *demoForNSOperation;
+@property (nonatomic, strong) IFDRunLoopDemo *runLoopDemo;
+@property (nonatomic, strong) UITextView *textView;
 @end
 
 @implementation ViewController
@@ -25,6 +30,20 @@
     
     [self test];
     [self testKVO];
+    [self.demoForNSOperation testNSOperation];
+    [self.runLoopDemo testRunLoop];
+//    [self startResidentThreadTest];
+    
+    for (int i=0;i<150;i++) {
+        NSString *textString = [self.textView.text stringByAppendingString:[NSString stringWithFormat:@"%d\n", i]];
+        self.textView.text = textString;
+    }
+}
+
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.textView.frame = CGRectMake(20.f, 200.f, 300.f, 200.f);
 }
 
 #pragma mark -
@@ -132,12 +151,51 @@
 }
 
 #pragma mark -
+#pragma mark resident thread
+- (void)startResidentThreadTest {
+    [self.runLoopDemo startResidentThread];
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    /// 利用performSelector，在self.thread的线程中调用run2方法执行任务
+    [self performSelector:@selector(run2) onThread:self.runLoopDemo.thread withObject:nil waitUntilDone:NO];
+}
+
+- (void)run2 {
+    
+    NSLog(@"runResidentMethod - running on self.thread:%@, [NSThread currentThread]:%@.", self.runLoopDemo.thread, [NSThread currentThread]);
+}
+
+#pragma mark -
 #pragma mark property method
 - (IFDDemoForGCD *)demoForGCD {
     if (!_demoForGCD) {
         _demoForGCD = [[IFDDemoForGCD alloc] init];
     }
     return _demoForGCD;
+}
+
+- (IFDDemoForNSOperation*)demoForNSOperation {
+    if (!_demoForNSOperation)  {
+        _demoForNSOperation = [[IFDDemoForNSOperation alloc] init];
+    }
+    return _demoForNSOperation;
+}
+
+- (IFDRunLoopDemo *)runLoopDemo {
+    if (!_runLoopDemo) {
+        _runLoopDemo = [[IFDRunLoopDemo alloc] init];
+    }
+    return _runLoopDemo;
+}
+
+- (UITextView *)textView {
+    if (!_textView) {
+        _textView = [[UITextView alloc] init];
+        _textView.backgroundColor = [UIColor redColor];
+        [self.view addSubview:_textView];
+    }
+    return _textView;
 }
 
 @end

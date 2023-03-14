@@ -956,7 +956,7 @@
 //    [self groupWait];
 //    [self groupEnterAndLeave];
 //    [self semaphoreSync];
-    [self initTicketStatusSave];
+//    [self initTicketStatusSave];
 }
 
 #pragma mark -

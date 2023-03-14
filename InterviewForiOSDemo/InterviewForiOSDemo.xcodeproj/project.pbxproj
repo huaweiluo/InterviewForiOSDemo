@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8308C2AB29BC9C4A00CAE63F /* IFDDemoForNSOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308C2AA29BC9C4A00CAE63F /* IFDDemoForNSOperation.m */; };
+		8308C2AE29BCE4DD00CAE63F /* IDFOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308C2AD29BCE4DD00CAE63F /* IDFOperation.m */; };
+		8308C96C29BEB48C00CAE63F /* IFDRunLoopDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 8308C96B29BEB48C00CAE63F /* IFDRunLoopDemo.m */; };
 		830B0CB429B43EE900E07786 /* IFDDemoForGCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 830B0CB329B43EE900E07786 /* IFDDemoForGCD.m */; };
 		83B1BEDB29B31F4000C859A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1BEDA29B31F4000C859A4 /* AppDelegate.m */; };
 		83B1BEDE29B31F4000C859A4 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B1BEDD29B31F4000C859A4 /* SceneDelegate.m */; };
@@ -20,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8308C2A929BC9C4A00CAE63F /* IFDDemoForNSOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFDDemoForNSOperation.h; sourceTree = "<group>"; };
+		8308C2AA29BC9C4A00CAE63F /* IFDDemoForNSOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFDDemoForNSOperation.m; sourceTree = "<group>"; };
+		8308C2AC29BCE4DD00CAE63F /* IDFOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IDFOperation.h; sourceTree = "<group>"; };
+		8308C2AD29BCE4DD00CAE63F /* IDFOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IDFOperation.m; sourceTree = "<group>"; };
+		8308C96A29BEB48C00CAE63F /* IFDRunLoopDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFDRunLoopDemo.h; sourceTree = "<group>"; };
+		8308C96B29BEB48C00CAE63F /* IFDRunLoopDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFDRunLoopDemo.m; sourceTree = "<group>"; };
 		830B0CB229B43EE900E07786 /* IFDDemoForGCD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IFDDemoForGCD.h; sourceTree = "<group>"; };
 		830B0CB329B43EE900E07786 /* IFDDemoForGCD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IFDDemoForGCD.m; sourceTree = "<group>"; };
 		83B1BED629B31F4000C859A4 /* InterviewForiOSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InterviewForiOSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +60,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8308C2A829BC9A3F00CAE63F /* Operation */ = {
+			isa = PBXGroup;
+			children = (
+				8308C2A929BC9C4A00CAE63F /* IFDDemoForNSOperation.h */,
+				8308C2AA29BC9C4A00CAE63F /* IFDDemoForNSOperation.m */,
+				8308C2AC29BCE4DD00CAE63F /* IDFOperation.h */,
+				8308C2AD29BCE4DD00CAE63F /* IDFOperation.m */,
+			);
+			path = Operation;
+			sourceTree = "<group>";
+		};
 		83B1BECD29B31F4000C859A4 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +115,9 @@
 				83B1BEF729B3283700C859A4 /* IFDPropertyClass.m */,
 				830B0CB229B43EE900E07786 /* IFDDemoForGCD.h */,
 				830B0CB329B43EE900E07786 /* IFDDemoForGCD.m */,
+				8308C2A829BC9A3F00CAE63F /* Operation */,
+				8308C96A29BEB48C00CAE63F /* IFDRunLoopDemo.h */,
+				8308C96B29BEB48C00CAE63F /* IFDRunLoopDemo.m */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -169,9 +192,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8308C96C29BEB48C00CAE63F /* IFDRunLoopDemo.m in Sources */,
 				83B1BEE129B31F4000C859A4 /* ViewController.m in Sources */,
+				8308C2AE29BCE4DD00CAE63F /* IDFOperation.m in Sources */,
 				83B1BEF529B3281300C859A4 /* IFDKvc.m in Sources */,
 				83B1BEDB29B31F4000C859A4 /* AppDelegate.m in Sources */,
+				8308C2AB29BC9C4A00CAE63F /* IFDDemoForNSOperation.m in Sources */,
 				830B0CB429B43EE900E07786 /* IFDDemoForGCD.m in Sources */,
 				83B1BEF829B3283700C859A4 /* IFDPropertyClass.m in Sources */,
 				83B1BEEC29B31F4200C859A4 /* main.m in Sources */,
@@ -326,6 +352,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,6 +380,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
